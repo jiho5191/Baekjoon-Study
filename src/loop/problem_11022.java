@@ -3,15 +3,12 @@ package loop;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class problem_11021  {
+public class problem_11022 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
-
-        // 여러 문자열을 효율적으로 조합
-        // StringBuilder sb = new StringBuilder();
 
         int num = Integer.parseInt(br.readLine());
 
@@ -20,11 +17,7 @@ public class problem_11021  {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            bw.write("Case #" + i + ": " + (a+b) + "\n");
-
-            // sb.setLength(0); // 기존 내용 초기화 (하지 않으면 기존 내용 누적되어 출력)
-            // sb.append("case #").append(i).append(": ").append(a + b).append("\n");
-            // bw.write(sb.toString());
+            bw.write(String.format("Case #%d: %d + %d = %d\n", i, a, b, a+b));
         }
 
         bw.flush();
